@@ -1,14 +1,14 @@
 # Kanban Learning Project: Python to Full-Stack TypeScript
 
-This repository is a AI-driven learning project that I decided to test in order to get me from a python developer to an actual full-stack developer that is able to produce a web-App using up to date frameworks.
+This repository is an AI-driven learning project that I decided to test in order to transition me from a Python developer to a proficient full-stack developer that is able to produce a web app using up to date frameworks.
 
-For this I'm using AI not as a coding engine, but as a teacher. As I say, it is an experiment that has been working great as far as I'm concerned. I based this AI in what I know about pedagogy and psychology as a psychologist myself, prioritizing what it's know as _Meaningful Learning_.
+For this I'm using AI not as a coding engine, but as a teacher. As I say, it is an experiment that has been working great as far as I'm concerned. I based this AI in what I know about pedagogy and psychology as a psychologist myself, prioritizing what is known as _Meaningful Learning_.
 
-Not a single line of code in this repository has been written by AI. All the code it is human-written.
+**Not a single line of code in this repository has been written by AI**. All the code is human-written.
 
 If you wish to try this yourself you can find all the prompts in the `.ai/` folder. And if you wish to see the actual building process. All of the chats with AI are saved in `.ai/sessions/` along with summaries so you can check the process in depth.
 
-**DISCLAIMER**: By no means am I trying to disregard the importance of human teaching. Rather, I am trying to seek the potential of AI to make a middle-ground between self-teaching and actual teaching.
+**DISCLAIMER**: I am not attempting to disregard the importance of human instructors. Rather, I am exploring the potential of AI to bridge the gap between self-teaching and formal education.
 
 ---
 
