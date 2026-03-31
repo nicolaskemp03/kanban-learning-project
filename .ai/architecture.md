@@ -57,11 +57,13 @@ Tag: id, name, color. (Many-to-Many with Tasks).
 |    `title`    | `VARCHAR(50)` |         `NOT NULL`         |                 The Task's Title                  |
 |   `content`   |    `TEXT`     |       `DEFAULT NULL`       |       the description of the task Optional        |
 |  `due_date`   |    `DATE`     |       `DEFAULT NULL`       |             The Due date for the task             |
+|  `position`   |   `INTEGER`   |   `NOT NULL` `DEFAULT 1`   |         Position of the task in the list          |
 |   `list_id`   |   `INTEGER`   |  `FOREIGN KEY` `NOT NULL`  | The list_id of the list where the tasl is located |
 | `created_at`  | `TIMESTAMPTZ` | `NOT NULL` `DEFAULT now()` |         Timestamp of creation of the task         |
 |  `status_id`  |   `INTEGER`   |  `FOREIGN KEY` `NOT NULL`  |         The id of the status of the task          |
 | `priority_id` |   `INTEGER`   |  `FOREIGN KEY` `NOT NULL`  |        the id of the priority of the task         |
 | `updated_at`  | `TIMESTAMPTZ` | `NOT NULL` `DEFAULT now()` |     Timestamp of last change done to the task     |
+> Add UNIQUE constraint `UNIQUE(list_id, position)`
 
 ### Statuses Table:
 | Column Name |   Data Type   |  Constraints  |      Description       |
@@ -318,6 +320,7 @@ DELETE /tasks/:id Remove a task
             "title": "Buying Cake",
             "content": "I'll pass by the pattissier on monday",
             "due_date": "2025-07-07",
+            "position": 1,
             "list_id":4,
             "created_at": "2025-07-01 14:45:00-05",
             "status_id": 1,
@@ -329,6 +332,7 @@ DELETE /tasks/:id Remove a task
             "title": "Buying a Present",
             "content": "I'll Buy it online. There was this dress she really wanted",
             "due_date": "2025-07-03",
+            "position": 2,
             "list_id":4,
             "created_at": "2025-07-01 14:46:00-05",
             "status_id": 2,
@@ -340,6 +344,7 @@ DELETE /tasks/:id Remove a task
             "title": "Send invites",
             "content": "I gotta invite all family and help her mom prepare invites for her friends",
             "due_date": "2025-07-04",
+            "position": 3,
             "list_id":4,
             "created_at": "2025-07-01 14:47:00-05",
             "status_id": 0,
@@ -373,6 +378,7 @@ DELETE /tasks/:id Remove a task
     "title": "Clean the House",
     "content": "I gotta clean the house for the party day",
     "due_date": "2025-07-08",
+    "position": 4,
     "list_id":4,
     "created_at": "2025-07-01 15:49:00-05",
     "status_id": 1,
@@ -392,6 +398,7 @@ DELETE /tasks/:id Remove a task
     "title": "Clean the House",
     "content": "I gotta clean the house for the party day",
     "due_date": "2025-07-08",
+    "position": 3,
     "list_id":4,
     "status_id": 2,
     "priority_id": 0
@@ -408,6 +415,7 @@ DELETE /tasks/:id Remove a task
     "title": "Send invites",
     "content": "I gotta clean the house for the party day",
     "due_date": "2025-07-08",
+    "position": 3,
     "list_id":4,
     "created_at": "2025-07-01 14:49:00-05",
     "status_id": 2,

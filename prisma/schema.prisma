@@ -1,0 +1,78 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            Int      @id @default(autoincrement())
+  email         String   @unique @db.VarChar(50)
+  username      String   @unique @db.VarChar(20)
+  password_hash String   @db.VarChar(255)
+  created_at    DateTime @default(now()) @db.Timestamptz()
+  board         Board[]
+}
+
+model Board {
+  id         Int      @id @default(autoincrement())
+  title      String   @db.VarChar(50)
+  desc       String?   @db.VarChar(100)
+  long_desc  String?
+  owner_id   Int
+  user       User    @relation(fields: [owner_id], references: [id])
+  created_at DateTime @default(now()) @db.Timestamptz()
+  updated_at DateTime @updatedAt @db.Timestamptz()
+  list       List[]
+}
+
+model List {
+  id         Int      @id @default(autoincrement())
+  title      String   @db.VarChar(50)
+  desc       String?   @db.VarChar(100)
+  board_id   Int
+  board      Board   @relation(fields: [board_id], references: [id])
+  position   Int      @default(1)
+  created_at DateTime @default(now()) @db.Timestamptz()
+  updated_at DateTime @updatedAt @db.Timestamptz()
+  task       Task[]
+
+  @@unique([position, board_id])
+}
+
+model Task {
+  id          Int       @id @default(autoincrement())
+  title       String    @db.VarChar(50)
+  content     String?
+  due_date    DateTime? @db.Date
+  position    Int       @default(1)
+  list_id     Int
+  list        List     @relation(fields: [list_id], references: [id])
+  status_id   Int
+  status      Status    @relation(fields: [status_id], references: [id])
+  priority_id Int
+  priority    Priority  @relation(fields: [priority_id], references: [id])
+  created_at  DateTime  @default(now()) @db.Timestamptz()
+  updated_at  DateTime  @updatedAt @db.Timestamptz()
+
+  @@unique([position, list_id])
+}
+
+model Status {
+  id     Int    @id @default(autoincrement())
+  status String @db.VarChar(50)
+  tasks  Task[]
+}
+
+model Priority {
+  id       Int    @id @default(autoincrement())
+  priority String @db.VarChar(50)
+  tasks    Task[]
+}

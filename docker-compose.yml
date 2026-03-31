@@ -1,7 +1,7 @@
 services:
   db:  
     image: postgres:16-alpine
-    name: kanban_db
+    container_name: kanban_db
     environment:
       POSTGRES_USER: kanban
       POSTGRES_PASSWORD: ${DB_PASSWORD}
