@@ -2,7 +2,7 @@
 
 This repository is a AI-driven learning project that I decided to test in order to get me from a python developer to an actual full-stack developer that is able to produce a web-App using up to date frameworks.
 
-For this I'm using AI not as a coding engine, but as a teacher. As I say, it is an experiment that has been working great as far as I'm concerned.
+For this I'm using AI not as a coding engine, but as a teacher. As I say, it is an experiment that has been working great as far as I'm concerned. I based this AI in what I know about pedagogy and psychology as a psychologist myself, prioritizing what it's know as _Meaningful Learning_.
 
 Not a single line of code in this repository has been written by AI. All the code it is human-written.
 
