@@ -1,98 +1,53 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Kanban Learning Project: Python to Full-Stack TypeScript
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+This repository is a AI-driven learning project that I decided to test in order to get me from a python developer to an actual full-stack developer that is able to produce a web-App using up to date frameworks.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+For this I'm using AI not as a coding engine, but as a teacher. As I say, it is an experiment that has been working great as far as I'm concerned.
 
-## Description
+Not a single line of code in this repository has been written by AI. All the code it is human-written.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+If you wish to try this yourself you can find all the prompts in the `.ai/` folder. And if you wish to see the actual building process. All of the chats with AI are saved in `.ai/sessions/` along with summaries so you can check the process in depth.
 
-## Project setup
+**DISCLAIMER**: By no means am I trying to disregard the importance of human teaching. Rather, I am trying to seek the potential of AI to make a middle-ground between self-teaching and actual teaching.
 
-```bash
-$ npm install
-```
+---
 
-## Compile and run the project
+# AI-Written in-depth explanation
 
-```bash
-# development
-$ npm run start
+## 🎯 The Objective
+This project is a dedicated, AI-guided learning curriculum designed to facilitate a transition from Python development to a strict, statically-typed JavaScript/TypeScript ecosystem. The end goal is to build a full-stack Kanban project manager (similar to Trello or ClickUp) from scratch to master modern web engineering principles.
 
-# watch mode
-$ npm run start:dev
+## 🧠 Pedagogical Structure: The 7 Phases
+The project is built in a strict sequential order to respect the learning curve and ensure fundamental concepts are mastered before adding framework abstractions.
 
-# production mode
-$ npm run start:prod
-```
+- **Phase 0: Rosetta Stone** (Completed) - Mapping Python concepts to TypeScript (Syntax, Types, Event Loop).
+- **Phase 1: Pure TypeScript Sandbox** (Completed) - Building CLI tooling without frameworks to understand the compiler and runtime.
+- **Phase 2: Backend Foundations & Docker** (Completed) - NestJS bootstrapping, PostgreSQL containerization, and ORM integration.
+- **Phase 3: Core API & Database Integration** (Current) - Implementing RESTful endpoints and CRUD operations for Boards, Lists, and Tasks.
+- **Phase 4: Frontend Translation & Foundations** - Moving to React, mastering functional components, Hooks, and the Virtual DOM.
+- **Phase 5: Integration & State Management** - Connecting React to NestJS, handling CORS, and implementing complex Drag-and-Drop state.
+- **Phase 6: DevOps & Delivery** - Finalizing multi-stage Dockerfiles and project documentation.
 
-## Run tests
+## 🛠 Tech Stack
+- **Language:** TypeScript (Strict Mode)
+- **Backend:** Node.js & NestJS
+- **Database:** PostgreSQL
+- **ORM:** Prisma
+- **Frontend:** React (Functional Components & Hooks)
+- **State Management:** Zustand
+- **Infrastructure:** Docker & Docker Compose
+- **Environment:** Nix / NixOS
 
-```bash
-# unit tests
-$ npm run test
+## 🤖 The AI Mentor Protocol: "Zero-Code Mandate"
+This project follows a strict interaction protocol defined in `.ai/persona.md`. The AI acts as a **Socratic Technical Mentor**. 
 
-# e2e tests
-$ npm run test:e2e
+**The Rule:** The AI is forbidden from generating, completing, or fixing functional code. Every line of code in this repository has been written by the developer based on conceptual guidance, documentation research, and architectural reviews provided by the mentor.
 
-# test coverage
-$ npm run test:cov
-```
+## 📂 Project Organization
+- `/src` - NestJS Backend Source.
+- `/prisma` - Database schema and migrations.
+- `/.ai` - Meta-directory containing architectural decisions, curriculum context, and session logs.
+- `/z_archive_phase_01` - Archived code from the initial TypeScript sandbox phase.
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+---
+*Built with ❤️ and a lot of Socratic questioning.*
